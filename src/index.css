@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-primary: #242424;
+    --color-secondary: #FAFAFA;
+    --color-main: hsl(275, 98%, 50%);
+    --color-bg: #151515;
+
+    --ff-primary: 'Montserrat', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    font: inherit;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    text-rendering: optimizeSpeed;
+    background: var(--color-bg);
+    font-family: var(--ff-primary);
+    color: var(--color-secondary);
+}
+
+img,
+svg,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-secondary);
+}
+
+i {
+    font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::after,
+    *::before {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+
+/* Animations */
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(400%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-400%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-400%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(400%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateX(0%);
+    }
+
+    99% {
+        transform: translateX(400%);
+        opacity: 0;
+    }
+
+    100% {
+        display: none;
+    }
+}
+
+@keyframes oscillate {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(40%);
+    }
+}
+
+@keyframes breathe {
+    0% {
+        font-variation-settings: 'wght' 100, 'wdth' 85;
+        font-size: 8rem;
+    }
+
+    40% {
+        color: rgba(255, 0, 225, 0.637);
+    }
+
+    45% {
+        color: rgb(156, 0, 200);
+    }
+
+    60% {
+        font-variation-settings: 'wght' 400, 'wdth' 85;
+        color: rgb(110, 1, 140);
+        font-size: 8.5rem;
+    }
+
+    80% {
+        color: rgba(255, 0, 225, 0.637);
+    }
+
+    100% {
+        font-variation-settings: 'wght' 100, 'wdth' 85;
+        font-size: 8rem;
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.title {
+    font-size: 8rem;
+    font-weight: 100;
+    line-height: 8rem;
+    font-variation-settings: 'wght' 100, 'wdth' 85;
+}
+
+.title.words .char {
+    transform: translateY(400%);
+    opacity: 0;
+    --delay: calc((var(--char-index) + 1) * 0.5s);
+    animation:
+        slide-down .4s calc((var(--char-index) + 1) * 0.1s) cubic-bezier(0.39, 0.575, 0.565, 1) forwards,
+        breathe 5s var(--delay) infinite both;
+}
+
+#scroll-dialog-title,
+#scroll-dialog-content,
+#scroll-dialog-description {
+    background: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+#scroll-dialog-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+#scroll-dialog-title a {
+    background: var(--color-bg);
+    padding: 2%;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+#scroll-dialog-title a:hover {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+#scroll-dialog-content {
+    border-bottom: none;
+    border-color: var(--color-secondary);
+}

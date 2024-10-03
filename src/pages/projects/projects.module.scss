@@ -1,0 +1,129 @@
+.projectsContainer {
+    height: 100vh;
+    padding: 5% 5% 0% 5%;
+    position: relative;
+
+    .titleContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        opacity: 0;
+        animation: fade-in .1s forwards;
+
+        button {
+            padding: 20px;
+            border-radius: 50px;
+            opacity: 0;
+            animation: fade-in 1s 2s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+            background: var(--color-primary);
+            border: none;
+            color: var(--color-secondary);
+            font-size: 1.5rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+
+            &:hover {
+                background: var(--color-secondary);
+                color: var(--color-primary);
+            }
+        }
+    }
+
+    .cardsContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2em;
+        margin-top: 5%;
+
+        .card {
+            --delay: calc((var(--card-index) + .5) * 0.1s);
+            opacity: 0;
+            animation: slide-right 2s var(--delay) cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+        }
+    }
+
+    #model {
+        position: fixed;
+        bottom: -90%;
+        right: -90%;
+        width: 200%;
+        height: 200%;
+        z-index: -1;
+        opacity: 0;
+        animation: fade-in 1s 2s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+    }
+
+    &.animateOut {
+        overflow: hidden;
+
+        .titleContainer {
+            opacity: 1;
+            animation: slide-out 2s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+        }
+
+        .cardsContainer {
+
+            .card {
+                opacity: 1;
+                animation: slide-out 2s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+                animation-delay: calc((var(--card-index) + .5) * 0.1s);
+            }
+        }
+
+        #model {
+            opacity: 1;
+            animation: fade-out 1s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+        }
+    }
+}
+
+
+
+/* Animations */
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-400%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(400%);
+    }
+}
