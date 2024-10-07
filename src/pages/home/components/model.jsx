@@ -70,7 +70,7 @@ function Model() {
       <directionalLight color="#d294ff" intensity={0.7} position={[2, -5, 2]} />
       <ambientLight color="#a09be8" intensity={0.5} />
       <mesh>
-        <icosahedronGeometry args={[1, 300]} />
+        <icosahedronGeometry args={[1, 200]} />
         <WaveShader /> {/* Use the WaveShader component here */}
       </mesh>
     </Canvas>

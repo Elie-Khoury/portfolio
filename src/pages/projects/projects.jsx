@@ -31,7 +31,7 @@ function Projects(props) {
       title: "Ecommerce Website",
       description:
         "For my internship with inmind.ai, I was tasked with building an ecommerce website using Angular integrating features from both its old and new versions such as Signals, Standalone components, Modules, and Observables.\n- The website includes authentication using JWT tokens and authorization for seperate users (customer and admin) to access different dashboards.\n- State management using NgRx to is implemented to keep track of the authentication state.\n- The website also utilizes local storage to keep track of items added to cart and search history.\n- An AI chatbot was also implemented and trained to answer questions regarding the products being sold.",
-      image: "./images/ecommerce.png",
+      image: "./images/ecommerce.webp",
       url: "https://github.com/Elie-Khoury/ecommerce-project",
       tools: ["angular", "docker", "typescript"],
     },
@@ -40,7 +40,7 @@ function Projects(props) {
       title: "Todo Website",
       description:
         "For my internship with inmind.ai, I was tasked with building a simple ToDo website.\n- Angular was used for the front-end and .NET Core was used to build the back-end along with PostgreSQL as the database.\n- The project was then dockerized and Docker Compose was used to create networks that link the three services using external and internal ports and to build and run a container with ease.",
-      image: "./images/todo-.png",
+      image: "./images/todo.webp",
       url: "https://github.com/Elie-Khoury/ToDo",
       tools: ["angular", "docker", "postgresql", "typescript", "net"],
     },
@@ -48,7 +48,7 @@ function Projects(props) {
       id: 3,
       title: "Raven Game",
       description: "",
-      image: "./images/raven-game-.png",
+      image: "./images/raven-game.webp",
       url: "",
       tools: ["javascript"],
     },
