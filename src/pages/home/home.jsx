@@ -6,7 +6,7 @@ import { Github } from "lucide-react";
 import { Linkedin } from "lucide-react";
 
 import Model from "./components/model";
-import myImg from "./images/priest.webp";
+import myImg from "../../assets/priest.webp";
 
 function Home(props) {
   const handleClick = () => {
@@ -62,7 +62,7 @@ function Home(props) {
           <h2>Full-stack Developer</h2>
         </div>
         <div id={s.container_4} className={s.container}>
-          <Model />
+          {/* <Model /> */}
         </div>
         <div id={s.container_5} className={s.container}>
           <h2>Toolbox</h2>
