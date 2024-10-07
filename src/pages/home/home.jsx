@@ -6,6 +6,7 @@ import { Github } from "lucide-react";
 import { Linkedin } from "lucide-react";
 
 import Model from "./components/model";
+import myImg from "./images/priest.webp";
 
 function Home(props) {
   const handleClick = () => {
@@ -35,7 +36,11 @@ function Home(props) {
             am currently learning .NET to refine my backend skills.
           </p>
         </div>
-        <div id={s.container_2} className={s.container}>
+        <div
+          id={s.container_2}
+          className={s.container}
+          style={{ backgroundImage: `url(${myImg})` }}
+        >
           <div className={s.socials}>
             <a
               href="https://github.com/Elie-Khoury"
