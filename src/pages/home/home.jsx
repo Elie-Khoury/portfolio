@@ -62,7 +62,7 @@ function Home(props) {
           <h2>Full-stack Developer</h2>
         </div>
         <div id={s.container_4} className={s.container}>
-          {/* <Model /> */}
+          <Model />
         </div>
         <div id={s.container_5} className={s.container}>
           <h2>Toolbox</h2>
