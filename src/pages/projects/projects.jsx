@@ -46,20 +46,12 @@ function Projects(props) {
     },
     {
       id: 3,
-      title: "Raven Game",
+      title: "Borrowed Time Website",
       description: "",
-      image: "./images/raven-game.webp",
-      url: "",
-      tools: ["javascript"],
+      image: "./images/borrowed-time.webp",
+      url: "https://borrowed-time-lb.github.io/",
+      tools: ["html","css","javascript"],
     },
-    // {
-    //   id: 4,
-    //   title: "Ecommerce Website",
-    //   description: "Project 3 description",
-    //   image: "./images/ecommerce-img.jpg",
-    //   url: "https://github.com/Elie-Khoury/ecommerce-project",
-    //   tools: ["angular", "docker", "typescript"],
-    // },
   ];
 
   useEffect(() => {
