@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     glsl(), // Add the GLSL plugin to the Vite config
   ],
-  base: "/elie-khoury-portfolio/"
+  base: "/portfolio/"
 });
