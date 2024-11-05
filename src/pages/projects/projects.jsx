@@ -47,7 +47,7 @@ function Projects(props) {
     {
       id: 3,
       title: "Borrowed Time Website",
-      description: "",
+      description: "This is a website for a local band called Borrowed Time.\nThe website was built using vanilla HTML, CSS, and JavaScript.\nThe website is similar to a portfolio website in the sense that it showcases the band's music, past and upcoming events, as well as their merchandise.",
       image: "./images/borrowed-time.webp",
       url: "https://borrowed-time-lb.github.io/",
       tools: ["html","css","javascript"],

@@ -32,8 +32,9 @@ function Home(props) {
           <p>
             Hi, my name is Elie El Khoury. I am a Senior Computer and
             Communcations Engineer at Notre Dame University - Louaize with a
-            passion for software development. I am currently learning Angular. I
-            am currently learning .NET to refine my backend skills.
+            passion for software development. I am currently refining my Angular
+            skills and learning .NET to strengthen my knowledge in the backend
+            field.
           </p>
         </div>
         <div
